@@ -1,4 +1,4 @@
-package com.balajiprabhu;
+package com.balajiprabhu.encapsulations;
 
 public class Account {
 

@@ -1,4 +1,4 @@
-package com.balajiprabhu;
+package com.balajiprabhu.interfaces;
 
 public interface TaxCalculator {
     float calculateTax();

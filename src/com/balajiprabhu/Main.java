@@ -1,10 +1,12 @@
 package com.balajiprabhu;
 
+import com.balajiprabhu.inheritance.TextBox;
+
 public class Main {
 
     public static void main(String[] args) {
-        MailService mailService = new MailService();
-        System.out.println(mailService.sendEmail());
+        TextBox textBox = new TextBox();
+        textBox.enable();
     }
 
 }

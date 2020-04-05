@@ -3,7 +3,11 @@ package com.balajiprabhu;
 public class Main {
 
     public static void main(String[] args) {
-        User user = new User("Balaji");
-        user.sayHello();
+        TaxCalculator taxCalculator = calculateTax();
+        System.out.println(taxCalculator.calculateTax());
+    }
+
+    private static TaxCalculator calculateTax() {
+        return new TaxCalculatorQuarterOne();
     }
 }

@@ -1,7 +1,11 @@
 package com.balajiprabhu.inheritance;
 
-public class UIControl {
+abstract public class UIControl {
+
     public void enable() {
         System.out.println("Enabled");
     }
+
+    // Polymorphism
+    abstract public void draw();
 }

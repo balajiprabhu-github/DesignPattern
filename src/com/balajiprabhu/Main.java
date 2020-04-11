@@ -1,18 +1,29 @@
 package com.balajiprabhu;
 
-import com.balajiprabhu.inheritance.CheckBox;
-import com.balajiprabhu.inheritance.TextBox;
-import com.balajiprabhu.inheritance.UIControl;
+import com.balajiprabhu.momento.Editor;
+import com.balajiprabhu.momento.History;
 
 public class Main {
 
     public static void main(String[] args) {
-        drawUIControls(new TextBox());
-        drawUIControls(new CheckBox());
-    }
 
-    private static void drawUIControls(UIControl control) {
-        control.draw();
+        Editor editor = new Editor();
+        History history = new History();
+
+        editor.setContent("Hi,");
+        history.push(editor.createState());
+
+        editor.setContent("This is");
+        history.push(editor.createState());
+
+        editor.setContent("Momento Pattern");
+        history.push(editor.createState());
+
+        editor.setContent("Enjoying this series");
+        editor.restoreState(history.pop());// Undo Function
+
+        System.out.println(editor.getContent());
+
     }
 
 }
